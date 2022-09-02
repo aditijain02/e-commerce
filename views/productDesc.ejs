@@ -1,0 +1,132 @@
+<%- include('./partials/header') %> 
+<div class = "main-wrapper">
+    <div class = "container">
+        <div class = "product-div">
+            <div class = "product-div-left">
+                <div class = "img-container">
+                    <img src = "<%= payload.product.img%> " alt = "watch">
+                </div>  
+            </div>
+            <div class = "product-div-right">
+                <span class = "product-name"><%= payload.product.productName %> </span>
+                <span class = "product-price">Rs &nbsp<%= payload.product.price %> </span>
+                <div class = "product-rating">
+                    <span><i class = "fas fa-star"></i></span>
+                    <span><i class = "fas fa-star"></i></span>
+                    <span><i class = "fas fa-star"></i></span>
+                    <span><i class = "fas fa-star"></i></span>
+                    <span><i class = "fas fa-star-half-alt"></i></span>
+                    <span>(350 ratings)</span>
+                </div>
+                <p class = "product-description"><%= payload.product.desc %> </p>
+                <div class = "btn-groups">
+                    <button type = "button" class = "add-cart-btn"><i class = "fas fa-shopping-cart"></i><a href="/addtocart/<%= payload.product._id %>">Add to cart</a></button>
+                    <!-- <button type = "button" class = "buy-now-btn"><i class = "fas fa-wallet"></i>buy now</button> -->
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+                                    <script>
+                                        var productId = '<%= payload.product._id %>';
+                                    </script>
+
+
+
+  <section style="background-color: #f7f6f6;">
+    <div class="container py-2 text-dark">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+            
+            <form action="/product/review/<%= payload.product._id %>" method="POST">
+                
+                <div class="form-outline mb-4">
+                <input  name="content" type="text" id="form2Example1" class="form-control" placeholder="Add a review" />
+                <br>
+                <div class="range">
+                  <!-- <span>Rating </span> -->
+                  <fieldset class="starability-grow">
+                    
+                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                    <input type="radio" id="first-rate1" name="rating" value="1" />
+                    <label for="first-rate1" title="Terrible">1 star</label>
+                    <input type="radio" id="first-rate2" name="rating" value="2" />
+                    <label for="first-rate2" title="Not good">2 stars</label>
+                    <input type="radio" id="first-rate3" name="rating" value="3" />
+                    <label for="first-rate3" title="Average">3 stars</label>
+                    <input type="radio" id="first-rate4" name="rating" value="4" />
+                    <label for="first-rate4" title="Very good">4 stars</label>
+                    <input type="radio" id="first-rate5" name="rating" value="5" />
+                    <label for="first-rate5" title="Amazing">5 stars</label>
+                  </fieldset>
+                </div>
+                <label class="form-label" for="form2Example1">Give Ratings </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mb-4">Add </button>
+            
+            </form>
+        </div>
+    </div>
+  </div>
+</section>
+         
+
+  
+  
+  
+    
+  <section style="background-color: #f7f6f6;">
+    <div class="container py-5 text-dark">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="text-dark mb-0"> Reviews </h4>
+          </div>
+
+          <div class="rev">
+
+          </div>
+  
+          <!-- <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex flex-start">
+                <img class="rounded-circle shadow-1-strong me-3"
+                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(26).webp" alt="avatar" width="40"
+                  height="40" />
+                <div class="w-100">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="text-primary fw-bold mb-0">
+                      lara_stewart
+                      <span class="text-dark ms-2">Hmm, This poster looks cool</span>
+                    </h6>
+                    <p class="mb-0">2 days ago</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="small mb-0" style="color: #aaa;">
+                      <a href="#!" class="link-grey">Remove</a> •
+                      <a href="#!" class="link-grey">Reply</a> •
+                      <a href="#!" class="link-grey">Translate</a>
+                    </p>
+                    <div class="d-flex flex-row">
+                      <i class="fas fa-star text-warning me-2"></i>
+                      <i class="far fa-check-circle" style="color: #aaa;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+  
+          
+  
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="/js/addReview.js"></script>
+
+<%- include('./partials/footer') %> 

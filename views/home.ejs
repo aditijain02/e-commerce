@@ -1,0 +1,112 @@
+<%- include('./partials/header') %> 
+<div style="height: 40px"></div>
+
+<section class="product-list ">
+  <!-- <div>
+    <h1 class="align-center">
+      Products
+    </h1>
+  </div> -->
+  <div style="text-align: center;"><h3><b>Welcome <%= uname %></b></h3> </div>
+
+  <div id="cat" class="d-flex justify-content-center">
+    <a style="padding: 5px 20px" href="/home"><button type="button" class="btn btn-success">All Products</button></a>
+    <a   id="catb" style="padding: 5px 20px" href="/home/electronics"><button type="button" class="btn btn-info">Electronics</button></a>
+      <a  id="catb" style="padding: 5px 20px" href="/home/grocery"><button type="button" class="btn btn-danger">Grocery</button></a>
+      <a  id="catb" style="padding: 5px 20px" href="/home/fashion"><button type="button" class="btn btn-secondary">Fashion</button></a>
+      <a  id="catb" style="padding: 5px 20px" href="/home/mobiles"><button type="button" class="btn btn-warning">Mobiles</button></a>
+      
+</div>
+  <div  class="searchbar">
+      
+      <input class="search-input" placeholder="Search" data-search>
+      <span class="search-icon"></span>
+    </div>
+
+  <div class="product-container">
+    
+    
+ 
+<!--       First Product -->
+  <div class="card">
+    <div class="title">Polaroid Camera</div>
+    <div class="image">
+      <img
+        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+      />
+    </div>
+    <div class="text">
+      This is a polaroid camera. O'l skool style.
+    </div>
+
+      <button  class="buy-button details">
+        Buy Now
+      </button>
+
+  </div>
+
+  <!-- Second Product -->
+
+  <div class="card">
+    <div class="title">Polaroid Camera</div>
+    <div class="image">
+      <img
+        src="https://cdn.glitch.com/5f8445e6-7cb3-47ef-8b81-884235184212%2Fphoto-1526170375885-4d8ecf77b99f.jpeg?v=1585724749339"
+      />
+    </div>
+    <div class="text">
+      This is a polaroid camera. O'l skool style.
+    </div>
+
+       <button  class="buy-button details">
+        Buy Now
+      </button>
+ 
+  </div>
+  
+<!--       Third Product -->
+  <div class="card">
+    <div class="title">Polaroid Camera</div>
+    <div class="image">
+      <img
+        src="https://cdn.glitch.com/5f8445e6-7cb3-47ef-8b81-884235184212%2Fphoto-1515955656352-a1fa3ffcd111.jpeg?v=1585724733237"
+      />
+    </div>
+    <div class="text">
+      This is a polaroid camera. O'l skool style.
+    </div>
+
+       <button  class="buy-button details">
+        Buy Now
+      </button>
+ 
+  </div>
+  
+<!--       Fourth Product -->
+  <div class="card">
+    <div class="title">Polaroid Camera</div>
+    <div class="image">
+      <img
+        src="https://cdn.glitch.com/5f8445e6-7cb3-47ef-8b81-884235184212%2Fphoto-1486401899868-0e435ed85128.jpeg?v=1585724757848"
+      />
+    </div>
+    <div class="text">
+      This is a polaroid camera. O'l skool style.
+    </div>
+
+       <button  class="buy-button">
+        Buy Now
+      </button>
+ 
+  </div>
+     </div>
+  
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     <script src="/js/home.js"></script>
+  
+  
+</section>
+
+
+<%- include('./partials/footer') %> 
+

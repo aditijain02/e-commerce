@@ -1,0 +1,73 @@
+<%- include('./partials/header') %> 
+<div style="height: 70px"></div>
+
+
+<main class="body-container">
+    <div class="home container">
+        <h1 class="text-center my-2">Edit product </h1>
+        <hr>
+        <div class="forms m-auto res-width">
+            <form style="padding-left: 25%; padding-right: 25%" action="/product/edit/<%= id %> " method="POST">
+                <div class="form-outline mb-5">
+                    <input type="text" id="name" class="form-control" name="name" required/>
+                    <label class="form-label" for="name">Product Name</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Not a suitable name</div>
+                  </div>
+                  <div class="form-outline mb-3">
+                    <input type="text" id="price" class="form-control" name="price" required/>
+                    <label class="form-label" for="price">Price</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Not a valid price!</div>
+                  </div>
+                  <h6 class="my-3 text-center">You can give either a image file or a image link</h6>
+                  <div class="form-outline mb-4">
+                    <input type="file" class="form-control" name="image" id="customFile" />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Not a valid image file!</div>
+                  </div>
+                  
+                  <div class="form-outline mb-4">
+                    <input type="text" id="img" class="form-control" name="img"/>
+                    <label class="form-label" for="img">Product Image Link</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Not a valid image link</div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-outline flex-fill mb-0">
+                      <select name="category" class="form-select" aria-label="Default select example">
+                        <option selected>Select Category</option>
+                        <option value="electronics">Electronics </option>
+                        <option value="grocery">Grocery</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="mobiles">Mobiles</option>
+                      </select>
+                      <label class="form-label" for="form3Example3c">Category</label>
+                    </div>
+                  </div>
+
+                  <div class="form-outline mb-5">
+                    <textarea class="form-control" id="desc" rows="4" name="desc" required></textarea>
+                    <label class="form-label" for="desc">Product Description</label>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Not a proper description</div>
+                  </div>
+                
+                  <div class="btn-container d-flex flex-column w-50 justify-center m-auto">
+                    <button type="submit" class="btn btn-primary mb-4">Edit Product</button>
+                  </div>
+                  <p><%= id %> </p>
+                  <script>
+                    var pid='<%= id %>';
+                  </script>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="/js/edit.js"></script>
+
+<%- include('./partials/footer') %> 
